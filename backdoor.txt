@@ -1,0 +1,13 @@
+Dopo aver ottenuto accesso a un sistema, fare in modo tale di poter tornare all'interno dello stesso sistema con privilegi d'amministratore senza dover ripetere gli stessi procedimenti. Può trasformare una vulnerabilità "temporanea" in una vulnerabilità "permanente"
+
+backdoor.py
+ricopre la funzione di server
+invia informazioni riguardo il proprio sistema (prima utilizzando il modulo "platform", poi il modulo "os") agli host connessi sotto determinati input (rispettivamente '1', '2')
+il dispositivo utilizza il metodo listen() per accettare un'unica connessione
+
+client_backdoor.py
+ricopre la funzione di un client
+l'opzione 0 permette di inviare il messaggio "0" senza poi leggere la risposta
+l'opzione 1 permette di inviare il messaggio "1" e poi leggere una eventuale risposta
+l'opzione 2 permette di inviare il messaggio "2" e una stringa a piacimento (che prende il nome di "path" nel codice)
+il dispositivo prova a connettersi dopo aver selezionato l'IP e la porta bersaglio
